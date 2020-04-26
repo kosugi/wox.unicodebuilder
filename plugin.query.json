@@ -1,0 +1,12 @@
+{
+    "ID":"3623bdba-85e9-11ea-9301-0c54152b91ec",
+    "ActionKeyword":"unicode",
+    "Name":"Unicodebuilder (query)",
+    "Description":"search unicode characters by your keyword",
+    "Author":"kosugi",
+    "Version":"1.0",
+    "Language":"python",
+    "Website":"https://github.com/kosugi/wox.unicodebuilder",
+    "IcoPath":"icon.png",
+    "ExecuteFileName":"main_query.py"
+}
