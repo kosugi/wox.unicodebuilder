@@ -1,0 +1,5 @@
+/build
+/wox.py
+/.python-version
+__pycache__/
+/tmp
