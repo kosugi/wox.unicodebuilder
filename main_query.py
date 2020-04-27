@@ -9,6 +9,7 @@ class Main(Wox):
     def query(self, q):
         results = []
         for i in query.do(q):
+            data = i['data']
             title = i['title']
             text = i['subtitle']
             dummy = i['dummy']
@@ -20,7 +21,7 @@ class Main(Wox):
             if not dummy:
                 item['JsonRPCAction'] = {
                     'method': 'copyToClipboard',
-                    'parameters': [title],
+                    'parameters': [data],
                     'dontHideAfterAction': False
                 }
             results.append(item)

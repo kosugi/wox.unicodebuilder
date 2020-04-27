@@ -27,9 +27,9 @@ lower_map = dict([(n, chr(n + 0x20)) for n in range(ord(u'A'), ord(u'Z') + 1)])
 def lower(s):
     return s.translate(lower_map)
 
-def to_item(title, subtitle, dummy=False):
+def make_item(data, title, subtitle, dummy=False):
     return {
-        'title': title, 'subtitle': subtitle, 'dummy': dummy
+        'data': data, 'title': title, 'subtitle': subtitle, 'dummy': dummy
     }
 
 def call_with_cursor(args, callback):
