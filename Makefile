@@ -35,5 +35,8 @@ $(OBJDIR)/NamesList.txt:
 $(OBJDIR)/db: $(OBJDIR)/NamesList.txt make-db.py
 	python make-db.py
 
+test:
+	python -m unittest test_builder test_query test_lib
+
 clean:
 	rm -rf *.pyc $(OBJDIR)/*
