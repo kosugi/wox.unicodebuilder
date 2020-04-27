@@ -7,16 +7,16 @@ def get_name_by_code(cursor, code):
     return cursor.fetchone()[0]
 
 def do_one(query):
+
+    if query.strip() == '':
+        return make_item(None, 'Type hexadecimal unicode codepoint', '', dummy=True)
+
     try:
         codepoint = parse_codepoint(query)
         s = codepoint2unichr(codepoint)
-    except:
-        return make_item(None, query, 'Type hexadecimal unicode codepoint', dummy=True)
-
-    try:
         name = call_with_cursor([codepoint], get_name_by_code)
     except:
-        return make_item(None, 'Bad or unsuitable codepoint', dummy=True)
+        return make_item(None, query, 'Bad or unsuitable codepoint', dummy=True)
     else:
         return make_item(s, u'{0}: {1}'.format(query, s), u'U+{0:04X}: {1}'.format(codepoint, name))
 
