@@ -1,6 +1,7 @@
-# wox.unicodebuilder
+# wox.unicodebuilder and query
 
-is a Wox plugin that makes unicode character from hexadecimal unicode codepoint as your input.
+unicodebuilder: makes unicode character from hexadecimal unicode codepoint
+unicodequery: search characters by name
 
 ## Requirements
 
@@ -11,8 +12,6 @@ is a Wox plugin that makes unicode character from hexadecimal unicode codepoint 
 
 TODO: registration <http://www.wox.one/plugin>
 
-* Unicodebuilder
-
 ## How to use
 
 ### Forward unicoding
@@ -21,9 +20,6 @@ Type `U+` and any hexadecimal unicode codepoint.
 This shows associated unicode character and you can copy it into clipboard.
 
 ### Reverse unicoding
-
-Type `unicode` and any unicode name.
-This shows associated unicode character and you can copy it into clipboard.
 
 Type `unicode` and any unicode character itself.
 This shows codepoint information and its unicode name.
