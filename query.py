@@ -61,3 +61,4 @@ def make_results(cursor, query):
 
 def do(query):
     return call_with_cursor([query], make_results)
+☃

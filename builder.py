@@ -18,7 +18,7 @@ def do_one(query):
     except:
         return make_item(None, 'Bad or unsuitable codepoint', dummy=True)
     else:
-῭        return make_item(s, u'{0}: {1}'.format(query, s), u'U+{0:04X}: {1}'.format(codepoint, name))
+        return make_item(s, u'{0}: {1}'.format(query, s), u'U+{0:04X}: {1}'.format(codepoint, name))
 
 def do(query):
     return [do_one(query)]
