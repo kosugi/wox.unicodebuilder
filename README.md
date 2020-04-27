@@ -21,6 +21,9 @@ This shows associated unicode character and you can copy it into clipboard.
 
 ### Reverse unicoding
 
+Type `unicode` and any unicode name.
+This shows associated unicode character and you can copy it into clipboard.
+
 Type `unicode` and any unicode character itself.
 This shows codepoint information and its unicode name.
 
