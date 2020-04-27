@@ -1,7 +1,7 @@
 # wox.unicodebuilder and query
 
-unicodebuilder: makes unicode character from hexadecimal unicode codepoint
-unicodequery: search characters by name
+* unicodebuilder: makes unicode character from hexadecimal unicode codepoint
+* unicodequery: search characters by name
 
 ## Requirements
 
