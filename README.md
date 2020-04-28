@@ -10,7 +10,9 @@
 
 ## How to install
 
-TODO: registration <http://www.wox.one/plugin>
+search `wpm install Unicodebuilder` and/or `wpm install Unicodebuilder (query)` on Wox.
+
+or visit http://www.wox.one/plugin/318 and/or http://www.wox.one/plugin/317
 
 ## How to use
 

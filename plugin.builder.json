@@ -1,10 +1,10 @@
 {
-    "ID":"0cd7d636-876e-11ea-add9-0c54152b91ec",
+    "ID":"0CD7D636876E11EAADD90C54152B91EC",
     "ActionKeyword":"u+",
     "Name":"Unicodebuilder",
     "Description":"building unicode character from hexadecimal unicode codepoint",
     "Author":"kosugi",
-    "Version":"1.0",
+    "Version":"1.0.0",
     "Language":"python",
     "Website":"https://github.com/kosugi/wox.unicodebuilder",
     "IcoPath":"icon.png",
