@@ -12,17 +12,20 @@ install: $(OBJDIR)/unicodebuilder.wox $(OBJDIR)/unicodequery.wox
 	mkdir -p $(WOX_PLUGIN_DIR)/unicodequery
 	rsync -r build/q.wox/ $(WOX_PLUGIN_DIR)/unicodequery/
 
-$(OBJDIR)/unicodebuilder.wox: $(OBJDIR)/icon.png $(OBJDIR)/db clipboard.py main.py main_builder.py plugin.builder.json lib.py builder.py
+$(OBJDIR)/unicodebuilder.wox: $(OBJDIR)/icon.png $(OBJDIR)/db wox.py clipboard.py main.py main_builder.py plugin.builder.json lib.py builder.py
 	mkdir -p $(OBJDIR)/b.wox
 	cp plugin.builder.json $(OBJDIR)/b.wox/plugin.json
 	cp $(OBJDIR)/icon.png $(OBJDIR)/db clipboard.py main.py main_builder.py lib.py builder.py $(OBJDIR)/b.wox
 	zip -j $@ $(OBJDIR)/b.wox/*
 
-$(OBJDIR)/unicodequery.wox: $(OBJDIR)/icon.png $(OBJDIR)/db clipboard.py main.py main_query.py plugin.query.json lib.py query.py
+$(OBJDIR)/unicodequery.wox: $(OBJDIR)/icon.png $(OBJDIR)/db wox.py clipboard.py main.py main_query.py plugin.query.json lib.py query.py
 	mkdir -p $(OBJDIR)/q.wox
 	cp plugin.query.json $(OBJDIR)/q.wox/plugin.json
 	cp $(OBJDIR)/icon.png $(OBJDIR)/db clipboard.py main.py main_query.py lib.py query.py $(OBJDIR)/q.wox
 	zip -j $@ $(OBJDIR)/q.wox/*
+
+wox.py:
+	wget https://raw.githubusercontent.com/Wox-launcher/Wox/master/JsonRPC/wox.py
 
 $(OBJDIR)/icon.png: icon.svg
 	@[ -d "$(OBJDIR)" ] || mkdir -p $(OBJDIR)
@@ -39,4 +42,4 @@ test:
 	python -m unittest test_builder test_query test_lib
 
 clean:
-	rm -rf *.pyc $(OBJDIR)/*
+	rm -rf *.pyc $(OBJDIR)/* wox.py
